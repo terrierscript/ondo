@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/suisho/ondo/issues"
   },
-  "homepage": "https://github.com/suisho/ondo"
+  "homepage": "https://github.com/suisho/ondo",
+  "dependencies": {
+    "pi-spi": "^0.8.7"
+  }
 }
