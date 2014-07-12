@@ -1,6 +1,7 @@
 var Degrees = new Firebase("https://torid-fire-7950.firebaseio.com/degree_log");
 Degrees.limit(60).on("value", function(d){
   app.loading = false
+  app.logs = []
   d.forEach(function(log){
     app.logs.unshift(log.val())
   })
