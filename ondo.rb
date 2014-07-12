@@ -12,5 +12,7 @@ end
 volt = (value * 3300)/1024
 degree = (volt - 500)/10
 puts degree
+
 response = firebase.push("degree", {degree: degree, time: Time.now})
+response = firebase.push("degree_list", {Time.now.to_i : degree})
 response = firebase.set("last-degree", degree)
