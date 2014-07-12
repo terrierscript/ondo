@@ -15,5 +15,5 @@ puts degree
 
 response = firebase.push("degree", {degree: degree, time: Time.now})
 time = Time.now.to_i
-response = firebase.push("degree_list", {time => degree})
+response = firebase.set("degree_list", {time => degree})
 response = firebase.set("last-degree", degree)
