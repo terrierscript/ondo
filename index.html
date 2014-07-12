@@ -27,9 +27,9 @@
       <section id="console">
         <div v-show="loading">loading...</div>
         <ul>
-          <li v-repeat="logs">
+          <li v-repeat="logs" v-transition class="log">
             <span>{{degree}}度</span>
-            <time datatime={{time}}>{{time}}</time>
+            <time datatime={{time}}>{{time}}({{time | timeago }})</time>
           </li>
           
         </ul>
