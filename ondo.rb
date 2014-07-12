@@ -1,6 +1,6 @@
 require 'pi_piper'
 require 'firebase'
-base_uri = 'https://torid-fire-7950.firebaseio.com/list'
+base_uri = 'https://torid-fire-7950.firebaseio.com/'
 
 firebase = Firebase::Client.new(base_uri)
 
