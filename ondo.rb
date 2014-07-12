@@ -14,6 +14,6 @@ degree = (volt - 500)/10
 puts degree
 
 #response = firebase.push("degree", {degree: degree, time: Time.now})
-time = Time.now.to_i
-response = firebase.set("degree_list", {time => degree})
+time = Time.now
+response = firebase.push("degree_log", {  degree: degree, time: time})
 response = firebase.set("last-degree", degree)
