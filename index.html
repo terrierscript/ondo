@@ -10,18 +10,9 @@
     <script src="javascripts/scale.fix.js"></script>
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
-    <!-- AngularJS -->
-    <script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
-    <script>
-    var degree = new Firebase("https://torid-fire-7950.firebaseio.com/degree_log");
-    degree.on("value", function(d){
-      d.forEach(function(log){
-        var val = log.val()        
-        var $li = $("<li>").text(val.degree + "度:"+val.time)
-        $(".console").prepend($li)
-      })
-    })
-    </script>
+    <!-- Vue -->
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.10.5/vue.min.js"></script>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
     <!--[if lt IE 9]>
@@ -33,9 +24,18 @@
       <header>
         <h1>Ondo</h1>
       </header>
-      <section>
-        <ul class="console"></ul>
+      <section id="console">
+        <div v-show="loading">loading...</div>
+        <ul>
+          <li v-repeat="logs">
+            <span>{{degree}}度</span>
+            <time datatime={{time}}>{{time}}</time>
+          </li>
+          
+        </ul>
       </section>
     </div>
+    <script src="javascripts/app.js"></script>
+
   </body>
 </html>
