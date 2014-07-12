@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/suisho/ondo",
   "dependencies": {
+    "firebase": "^1.0.17",
     "pi-spi": "^0.8.7"
   }
 }
