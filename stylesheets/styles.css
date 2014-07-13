@@ -357,11 +357,9 @@ footer p + p {
 
 .log{
   transition: all .3s ease;
-  height:1.5em;
   /*background: #DEDEDE;*/
   opacity:1;
 }
 .log.v-enter, .log.v-leave {
-  height: 0;
   opacity: 0;
 }
