@@ -36,10 +36,8 @@
       console.textContent = "console"
       window.onload = function(){
         console.textContent += " onload"
+        return false;
       }
-      document.addEventListener( "DOMContentLoaded", function(){
-        console.textContent += " ondcl"
-      })
     </script>
     <div class="wrapper">
       <header>
