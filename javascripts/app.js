@@ -8,7 +8,7 @@ Degrees.limit(60).on("value", function(d){
 })
 
 var app = new Vue({
-  el : "#console",
+  el : "#main",
   data : {
     loading: true,
     logs:[]
