@@ -29,6 +29,7 @@
     <![endif]-->
   </head>
   <body>
+
     <script>
       var console = document.createElement("div");
       console.id = "console"
@@ -36,7 +37,8 @@
       console.textContent = "console"
       window.onload = function(){
         console.textContent += " onload"
-        return false;
+        console.textContent += " img:"+document.querySelector("#img").complete
+        //return false;
       }
     </script>
     <div class="wrapper">
@@ -53,7 +55,7 @@
         </ul>
       </section>
     </div>
+    <img src="./images/large.jpg" id="img">
     <script src="javascripts/app.js"></script>
-
   </body>
 </html>
