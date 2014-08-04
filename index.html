@@ -21,12 +21,6 @@
     <!-- Firebase -->
     <script src="https://cdn.firebase.com/js/client/1.0.17/firebase.js"></script>
     <!-- Vue -->
-    <script>
-      var Degrees = new Firebase("https://torid-fire-7950.firebaseio.com/degree_log");
-      Degrees.limit(60).on("value", function(d){
-        console.textContent += " degreed"
-      })
-    </script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/vue/0.10.5/vue.min.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
 
@@ -35,25 +29,6 @@
     <![endif]-->
   </head>
   <body>
-
-    <script>
-      var console = document.createElement("div");
-      console.id = "console"
-      document.querySelector("body").appendChild(console)
-      console.textContent = "console"
-      window.onload = function(){
-        console.textContent += " onload"
-        //return false;
-      }
-      document.ondomcontentloaded= function(){
-        console.textContent += " img:"+document.querySelector("#img").complete
-      }
-      var timer = document.createElement("timer");
-      timer.id = "timer"
-      document.querySelector("body").appendChild(timer)
-
-
-    </script>
     <div class="wrapper">
       <header>
         <h1>Ondo</h1>
@@ -70,11 +45,5 @@
     </div>
     <img src="./images/large.jpg" id="img">
     <script src="javascripts/app.js"></script>
-    <script>
-    var time = 0
-    /*setInterval(function(){
-      timer.textContent = time++;
-    },10)*/
-    </script>
-  </body>
+    </body>
 </html>
