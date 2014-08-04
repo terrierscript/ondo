@@ -37,9 +37,16 @@
       console.textContent = "console"
       window.onload = function(){
         console.textContent += " onload"
-        console.textContent += " img:"+document.querySelector("#img").complete
         //return false;
       }
+      document.ondomcontentloaded= function(){
+        console.textContent += " img:"+document.querySelector("#img").complete
+      }
+      var timer = document.createElement("timer");
+      timer.id = "timer"
+      document.querySelector("body").appendChild(timer)
+      
+      
     </script>
     <div class="wrapper">
       <header>
@@ -57,5 +64,11 @@
     </div>
     <img src="./images/large.jpg" id="img">
     <script src="javascripts/app.js"></script>
+    <script>
+    var time = 0
+    setInterval(function(){
+      timer.textContent = time++;
+    },10)
+    </script>
   </body>
 </html>
