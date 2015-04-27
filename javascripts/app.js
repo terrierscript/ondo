@@ -1,6 +1,7 @@
+/* global: Vue*/
 (function(){
   Vue.directive("textcontent", {
-    bind : function(){
+    bind: function(){
       this.vm.$set(this.key, this.el.textContent)
     }
   })
@@ -14,13 +15,13 @@
   })
 
   var app = new Vue({
-    el : "#console",
-    data : {
+    el: "#main",
+    data: {
       loading: true,
-      logs:[]
+      logs: []
     },
-    filters : {
-      timeago : function(timeStr){
+    filters: {
+      timeago: function(timeStr){
         timeStr = timeStr.replace(/-/g, "/") // for opera
         var sec = ((new Date() - new Date(timeStr))/1000)
         var min = sec/60
@@ -29,7 +30,7 @@
     }
   })
   var foo = new Vue({
-    el : "#foo",
+    el: "#foo",
   })
   console.log(foo.baz)
   foo.$data.baz = "bee"
