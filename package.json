@@ -18,6 +18,10 @@
   "homepage": "https://github.com/suisho/ondo",
   "dependencies": {
     "firebase": "^1.0.17",
+    "johnny-five": "^0.8.62",
     "pi-spi": "^0.8.7"
+  },
+  "optionalDependencies": {
+    "raspi-io": "^3.1.0"
   }
 }
