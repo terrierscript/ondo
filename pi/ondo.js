@@ -1,5 +1,5 @@
-var five = require("johnny-five")
 var Raspi = require("raspi-io")
+var five = require("johnny-five")
 var board = new five.Board({
   io: new Raspi()
 })
@@ -7,8 +7,8 @@ var board = new five.Board({
 board.on("ready", function() {
   // This requires OneWire support using the ConfigurableFirmata
   var temperature = new five.Temperature({
-    controller: "DS18B20",
-    pin: 2
+    controller: "TMP36",
+    pin: "A0"
   })
 
   temperature.on("data", function(err, data){
