@@ -1,0 +1,26 @@
+{
+  "name": "ondo",
+  "version": "0.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/suisho/ondo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/suisho/ondo/issues"
+  },
+  "homepage": "https://github.com/suisho/ondo",
+  "dependencies": {
+    "firebase": "^1.0.17",
+    "johnny-five": "^0.8.62"
+  },
+  "optionalDependencies": {
+    "raspi-io": "^3.1.0"
+  }
+}
