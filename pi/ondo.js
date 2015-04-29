@@ -4,10 +4,13 @@ var ondo = require("../lib/ondo")
 
 ondo(function(err, c){
   var time = new Date().toString()
-  Degrees.push({
+  var data = {
     degree: c,
     error: err,
     time: time
+  }
+  console.log(data)
+  Degrees.push(data, function(){
+    process.exit(0)
   })
-  process.exit(0)
 })
