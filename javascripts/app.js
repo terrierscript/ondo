@@ -22,6 +22,10 @@
       logs: []
     },
     filters: {
+      ceil: function(degree){
+        var digit = 10
+        return Math.ceil(degree * digit) / digit
+      },
       timeago: function(timeStr){
         try{
           // timeStr = timeStr.replace(/-/g, "/") // for opera
