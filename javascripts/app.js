@@ -5,7 +5,8 @@
       this.vm.$set(this.key, this.el.textContent)
     }
   })
-  var Degrees = new Firebase("https://torid-fire-7950.firebaseio.com/degree_log");
+  var baseUrl = "https://torid-fire-7950.firebaseio.com/degree_log"
+  var Degrees = new Firebase(baseUrl);
   Degrees.limit(60).on("value", function(d){
     app.loading = false
     app.logs = []
@@ -22,15 +23,19 @@
     },
     filters: {
       timeago: function(timeStr){
-        timeStr = timeStr.replace(/-/g, "/") // for opera
-        var sec = ((new Date() - new Date(timeStr))/1000)
-        var min = sec/60
+        try{
+          // timeStr = timeStr.replace(/-/g, "/") // for opera
+          var sec = ((new Date() - new Date(timeStr)) / 1000 )
+          var min = sec / 60
+        }catch(e){
+          console.warn("warning time")
+        }
         return Math.ceil(min) + " min ago"
       }
     }
   })
   var foo = new Vue({
-    el: "#foo",
+    el: "#foo"
   })
   console.log(foo.baz)
   foo.$data.baz = "bee"
