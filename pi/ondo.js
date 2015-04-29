@@ -10,7 +10,8 @@ ondo(function(err, c){
     time: time
   }
   console.log(data)
-  Degrees.push(data, function(){
+  Degrees.push(data, function(err){
+    console.log(err)
     process.exit(0)
   })
 })
