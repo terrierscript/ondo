@@ -14,27 +14,40 @@
       app.logs.unshift(log.val())
     })
   })
-
+  var pastMin = function(timeStr){
+    try{
+      // timeStr = timeStr.replace(/-/g, "/") // for opera
+      var sec = ((new Date() - new Date(timeStr)) / 1000 )
+      var min = sec / 60
+    }catch(e){
+      console.warn("warning time")
+    }
+    return Math.ceil(min)
+  }
   var app = new Vue({
     el: "#main",
     data: {
       loading: true,
       logs: []
     },
+    computed: {
+    },
     filters: {
       ceil: function(degree){
         var digit = 10
         return Math.ceil(degree * digit) / digit
       },
+      // pastMin: function(timeStr){
+      //   return pastMin(timeStr)
+      // },
+      isCurrent: function(timeStr){
+        return (pastMin(timeStr) < 10)
+      },
+      isHighDegree: function(degree){
+        return (degree > 26)
+      },
       timeago: function(timeStr){
-        try{
-          // timeStr = timeStr.replace(/-/g, "/") // for opera
-          var sec = ((new Date() - new Date(timeStr)) / 1000 )
-          var min = sec / 60
-        }catch(e){
-          console.warn("warning time")
-        }
-        return Math.ceil(min) + " min ago"
+        return pastMin(timeStr) + " min ago"
       }
     }
   })

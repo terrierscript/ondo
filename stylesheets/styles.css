@@ -370,3 +370,9 @@ footer p + p {
   color:white;
 }
 
+.current{
+  font-weight:bold
+}
+.high-degree{
+  color: #900;
+}

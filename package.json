@@ -19,5 +19,9 @@
   "dependencies": {
     "firebase": "^1.2.0",
     "johnny-five": "^0.8.62"
+  },
+  "devDependencies": {
+    "babelify": "^6.0.2",
+    "budo": "^4.0.0"
   }
 }

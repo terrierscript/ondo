@@ -36,7 +36,11 @@
       <section id="main">
         <div v-show="loading">loading...</div>
         <ul>
-          <li v-repeat="logs" v-transition class="log">
+          <li v-repeat="logs" v-transition class="log" 
+            v-class="
+              current: time | isCurrent,
+              high-degree: degree | isHighDegree
+            ">
             <span>{{degree | ceil}}度</span>
             <time datatime={{time}}>{{time}}({{time | timeago }})</time>
           </li>
