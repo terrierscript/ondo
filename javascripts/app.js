@@ -44,7 +44,7 @@
         return (pastMin(timeStr) < 10)
       },
       isHighDegree: function(degree){
-        return (degree > 26)
+        return (degree > 27)
       },
       timeago: function(timeStr){
         return pastMin(timeStr) + " min ago"
